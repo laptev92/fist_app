@@ -1,0 +1,182 @@
+body{ 
+  padding: 0;
+  margin: 0;
+}
+h1{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  padding-top: 20px;
+}
+.ok{
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'OpenSans-Light';
+  color:white;
+  padding-top: 8px;
+  padding-right: 66px;
+  padding-left: 66px;
+  height: 40px;
+  text-align:center;
+  background-color: #3DCAF2;
+  margin-left: 20px;  
+}
+.cancel
+{ 
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'OpenSans-Light';
+  color:white;
+  padding-top: 8px;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 40px;
+  text-align:center;
+  background-color: #808080;
+  margin-left: 11px;
+}
+[class^='cancel']:hover{
+  color: #23527c;
+}
+.plus
+{ font-family: 'OpenSans-Light';
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  padding-top: 10px;
+  height: 40px;
+}
+.AlertDiv {
+    font-family: 'OpenSans-Light';
+    color:white;
+    text-align:center;
+    background-color: #3DCAF2;
+    width: 100%;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.box {
+ font-family: 'OpenSans-Light';
+  display: inline-block;
+  vertical-align: top;
+  width: 350px;
+  margin: 1em ;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 2px 2px 25px -10px rgba(46,74,117,0.58);
+  -moz-box-shadow: 2px 2px 25px -10px rgba(46,74,117,0.58);
+        box-shadow: 2px 2px 25px -10px rgba(46,74,117,0.58);
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: font-url('OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: font-url('OpenSans-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: font-url('OpenSans-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.semibold{
+  font-family: 'OpenSans-Semibold';
+}
+.light{
+  font-family: 'OpenSans-Light';
+}
+
+.lab{
+text-decoration: line-through;
+}
+
+  #da{
+  margin-left: 11px ;
+  width: 325px;
+  height: 40px !important;
+  }
+
+#parent_popup {
+display: none;
+  background: #000;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+#popup {
+display: none;
+width: 350px;
+padding-bottom: 16px;
+position: fixed;
+top: 40%; 
+margin-left: 35%;
+background-color: #fff; 
+z-index: 20;  
+}
+.dis{
+  display: none;
+}
+
+.select2-selection, .select2-selection__rendered, .select2-selection__arrow {
+
+height: 40px !important;
+
+  span {
+
+    line-height: 40px !important;
+    text-align: left;
+
+       }
+
+  }
+
+.select2-selection {
+
+border-radius: 0 !important;
+}
+[class^='select2']{
+
+  width: 325px !important;
+  
+}
+ .select2-selection__arrow{
+  width: 15px !important; 
+  }
+.select2-container{
+  }
+label{
+  cursor: pointer;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ * 
+ *= require select2
+ *= require_tree .
+ *= require_self
+ */
+ @import 'icheck/square/blue'

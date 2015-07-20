@@ -1,0 +1,56 @@
+<div class="AlertDiv">
+	<h1>Задачи</h1>
+	<div class="plus"><h1>+</h1></div>
+</div>	
+<div class="container">
+<div class="row	">
+<% @projects.each do |project| %>
+<div class="col-sm-12  col-md-6 col-lg-4">	
+<div class="box"><div class="semibold"><%= project.title %></div>
+<hr>
+<% project.todos.order(:id).each do |todo| %>
+<ul>
+<%= form_for todo, :metod => :put do %>
+<%= check_box_tag "#{todo.id}",todo.id,todo.isCompleted, :style =>"padding-left: -50px"%>
+<% if todo.isCompleted==true %>
+<%=label_tag "#{todo.id}",todo.text, :class=>("lab")%>
+<%else%>
+<%=label_tag "#{todo.id}",todo.text%>
+<% end %>
+<% end %>
+</ul>
+<% end %>
+</div>
+</div>
+<% end %>
+<div class="clearfix visible-md-block"></div>
+<div class="col-sm-12  col-md-6 col-lg-4"><div class="box"><div class="semibold"><%= @pro.title %></div>
+<hr>
+<% @pro.todos.order(:id).each do |todo| %>
+<ul>
+<%= form_for todo, :metod => :put do %>
+<%= check_box_tag "#{todo.id}",todo.id,todo.isCompleted, :style =>"padding-left: -50px"%>
+<% if todo.isCompleted==true %>
+<%=label_tag "#{todo.id}",todo.text, :class=>("lab")%>
+<%else%>
+<%=label_tag "#{todo.id}",todo.text%>
+<% end %>
+<% end %>
+</ul>
+<% end %>
+</div>
+</div>
+</div>
+</div>
+<div id="popup">		
+<div class="create">
+<%= form_for :todo , html: {id: "creater"} do |f| %>
+<div class="light"><h3 align='center'>новая задача</h3></div>
+<p><%=f.text_field :text , placeholder: "Название задачи...", id: "da", :style => "padding-left: 7px" %></p>
+<p id="da"><%=f.select(:project_id, Project.all.collect {|p| [p.title, p.id]})%></p>
+<span class="cancel">Отмена</span>
+<span class="ok"><%= link_to 'Ok',root_path, :onclick=>"$('#creater').submit()" %></span>
+<% end %>
+</div>
+</div>
+<div id="parent_popup"></div>
